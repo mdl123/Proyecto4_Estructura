@@ -10,17 +10,17 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Mike
+ * @author Michael and Denisse
  */
 public class nodo {
     
     String label;
     ArrayList<Integer>ar;
-   nodo(String h){
+    nodo(String h){
         ar=new ArrayList();
         label=h;
-   }
+    }
     
-    
+     
     
 }//fin de la clase
