@@ -14,6 +14,7 @@ import edu.uci.ics.jung.visualization.renderers.Renderer;
 import java.awt.Dimension;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Scanner;
 import javax.swing.JFrame;
 
 /**
@@ -31,12 +32,16 @@ public class Proyecto4_estru {
 
         //hay ponerle algo a las aristas como ruta1, ruta 2 , etc
         Graph<String, String> g = new DirectedSparseMultigraph<String, String>();
-  
+  //comienzo del ejemplo
         g.addEdge("ruta1","g" ,"x");
          g.addEdge("ruta2","g" ,"y");
           g.addEdge("ruta3","v" ,"y");
            g.addEdge("ruta4","x" ,"z");
+           g.addEdge("ruta5","x" ,"d");
+           g.addEdge("ruta6","x" ,"e");
+           g.addEdge("ruta7","z" ,"q");
         ArrayList<nodo> topo = toposort(g);
+        /*
         System.out.println(topo.size());
         for(int i=0;i<topo.size();i++){
             System.out.println("Nodo Actual: "+topo.get(i).label);
@@ -44,7 +49,12 @@ public class Proyecto4_estru {
                 System.out.println("Requerido para "+topo.get(i).label+ " "+ topo.get(topo.get(i).ar.get(i2)).label);
             }
         }//fin del for
+         
+        for(int i=0;i<topo.size();i++){
+            System.out.println(topo.get(i).label);
+        }//fin del for
         
+        */
          Layout l = new FRLayout(g);
         BasicVisualizationServer<String, String> vv
                 = new BasicVisualizationServer<String, String>(l);
@@ -58,6 +68,49 @@ public class Proyecto4_estru {
         frame.getContentPane().add(vv);
         frame.pack();
         frame.setVisible(true);
+       //fin del ejemplo
+        
+        //codigo principal
+        ArrayList<nodo>no;
+        no=new ArrayList();
+     for(int i=0;i<topo.size();i++){
+         if(topo.get(i).ar.isEmpty()){
+             System.out.print(topo.get(i).label+" ");
+             no.add(topo.get(i));
+         }//fin del if
+     }//fin del for
+        boolean marca=false;
+        System.out.println("");
+     ArrayList<nodo>meter;
+     meter=new ArrayList();
+     ArrayList<Integer>in;
+     in=new ArrayList();
+     ArrayList<String>impresion;
+     impresion=new ArrayList();
+     for(int i3=0;i3<no.size();i3++){
+     for(int i=0;i<topo.size();i++){
+         for(int i2=0;i2<topo.get(i).ar.size();i2++){
+            
+             if(no.isEmpty()==false){
+                 if(no.contains(topo.get(topo.get(i).ar.get(i2)))){
+                     if(meter.contains(topo.get(i))==false){
+                         System.out.print(topo.get(i).label+" ");
+                     meter.add(topo.get(i));
+                     }
+                 }//fin del if
+             }//fin del if
+         }//fin del for
+         
+     }//fin del for
+        no.clear();
+        for(int i4=0;i4<meter.size();i4++){
+            no.add(meter.get(i4));
+        }
+        meter.clear();
+         System.out.println("");
+     }//fin del tercer for
+     
+     
     }//fin del main
     
     //orden topologico
