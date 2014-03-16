@@ -1,0 +1,63 @@
+MAT102,Álgebra,MAT102
+ESP101,Español
+ADM102,Administración I
+LCC101,Ofimática I
+MAT103,Geometría y Trigonometría,MAT102
+HIS101,Historia de Honduras
+IND101,Introducción a la Ing. Industrial
+LCC102,Ofimática II,LCC101
+MAT104,Cálculo I Diferencial con Geometría Analítica,MAT102
+QUI101,Química General,MAT102
+SOC101,Sociología
+LCC103,Ofimática III,LCC102
+MAT201,Cálculo I Integral con Geometría Analítica,MAT104
+CON204,Análisis Contable I,IND101
+ART/DEP,Electiva de Arte o Deporte
+EIE1,Electiva de Idioma Extranjero I
+MAT202,Cálculo II con Geometría Analítica,MAT201
+MAT105,Álgebra Lineal,MAT103
+MER207,Mercadotecnia I,MAT102
+EIE2,Electiva de Idioma Extranjero II,EIE1
+MAT203,Ecuaciones Diferenciales,MAT202,MAT105
+CON308,Análisis Contable II,CON204
+FIS201,Física I,MAT201
+EIE3,Electiva de Idioma Extranjero III,EIE2
+MAT301,Estadística Matemática I,MAT201
+MEC301,Dibujo Técnico,MAT105
+FIS202,Física II,FIS201
+EIE4,Electiva de Idioma Extranjero IV,EIE3
+MAT302,Estadística Matemática II,MAT301
+IND403,Ingenieria Económixa,CON308,MAT301
+FIS203,Física III,FIS202
+CIV301,Estática,FIS201
+IND401,Control Estadistico de Procesos,MAT302
+CCC207,Programación para Ingeniería,MAT105
+IND405,Investigación de Operaciones para Ingeniería,MAT301
+CIV302,Resistencia de Materiales I,CIV301
+IND301,Ingeniería de Métodos, MAT302
+MEC401,Procesos de Manufactura,CIV302
+FIL101,Filosofía
+BIOIND,Electica de CC.NN
+IND307,Gestión de la Calidad,IND401
+IND309,Administración de las Operaciones I,MEC401
+IND202,Seguridad e Higenie Industrial,IND301
+TLLLIND1,Taller de Competencias I
+IND311,Seminario de Gestión de Procesos,IND307
+IND404,Admisnistración de Proyectos,IND405
+IND310,Administración de las Operaciones II,IND309
+TLLIND2,Taller de Competencias II
+IND406,Administración de la Tecnología,IND405
+LOG401,Logística I,IND310
+IND513,Regulación Automática,MEC401
+IND418,Innovación y Desarrollo de Productos,IND406
+IND417,Metrología y Normalización,IND311
+IND419,Manufactura Automatizada I,IND513
+EFEIND1,Electiva de Formación Específica I
+EMP401,Generación de Empresas I,IND418
+LOG403,Logística II,LOG401
+EFEIND2,Electiva de Formación Específica II
+EFEIND3,Electiva de Formación Específica III
+EMP402,Generación de Empresas II,EMP401
+IND413,Modelación de Procesos Industriales,IND419
+IND593,Práactica Profesional,EFEIND3,IND413
+IND594,Proyecto de Graduación,EFEIND3,IND413
