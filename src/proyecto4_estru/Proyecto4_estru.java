@@ -12,8 +12,15 @@ import edu.uci.ics.jung.visualization.BasicVisualizationServer;
 import edu.uci.ics.jung.visualization.decorators.ToStringLabeller;
 import edu.uci.ics.jung.visualization.renderers.Renderer;
 import java.awt.Dimension;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFrame;
 
 /**
@@ -25,8 +32,44 @@ public class Proyecto4_estru {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        
+    public static void main(String[] args) throws IOException {
+        ArrayList<Clase> clases = new ArrayList();
+        File archivo = null;
+        FileReader canal = null;
+        BufferedReader buffer = null;
+        try {
+            archivo = new File("./SistemasComputacionales.txt");
+            canal = new FileReader(archivo);
+            buffer = new BufferedReader(canal);
+            String linea;
+            try {
+                while(buffer.readLine()!= null){
+                    linea = buffer.readLine();
+                    String[] tokens = linea.split(",");
+                    String cod = tokens[0];
+                    String name = tokens[1];
+                    ArrayList<Clase> requisito = new ArrayList();
+                    for(int i=2;i<tokens.length;i++)
+                        for(int j=0;j<clases.size();j++)
+                            if(tokens[i].equals(clases.get(j).getCod()))
+                                requisito.add(clases.get(j));
+                    
+                    clases.add(new Clase(cod,name,requisito));
+                    
+                }
+            } catch (Exception e) {
+            }
+       } catch (Exception k) {
+       }
+       try{
+            buffer.close();
+            canal.close();
+       }catch(Exception h){
+       }
+      
+       for(int i=0;i<clases.size();i++)
+            System.out.println(clases.get(i));
+    
        
 
         //hay ponerle algo a las aristas como ruta1, ruta 2 , etc
