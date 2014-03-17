@@ -40,7 +40,6 @@ public class Proyecto4_estru {
         Graph<String, String> g = new DirectedSparseMultigraph<String, String>();
         menu();
         String entrada=s.nextLine();
-        String carreraSeleccionada = null;
         ArrayList<Clase> clases = new ArrayList();
         do{
                 if("1".equals(entrada)){
@@ -54,24 +53,28 @@ public class Proyecto4_estru {
                         System.out.println("");
                     }//fin del if
                     else{
-                        switch(valor){
-                            case 1: carreraSeleccionada = "./SistemasComputacionales.txt";
-                            case 2: carreraSeleccionada = "./AdministracionEmpresasTuristicas.txt";
-                            case 3: carreraSeleccionada = "./ComunicacionPublicidad.txt";
-                            case 4: carreraSeleccionada = "./Biomedica.txt";
-                            case 5: carreraSeleccionada = "./Industrial.txt";
-                            case 6: carreraSeleccionada = "./Finanzas.txt";
-                            default: carreraSeleccionada = "";
-                        }
                         File archivo = null;
                         BufferedReader buffer = null;
                         try {
-                             archivo = new File(carreraSeleccionada);
+                                if(valor==1)
+                                    archivo = new File("./SistemasComputacionales.txt");
+                                else if(valor==2) 
+                                    archivo = new File("./AdministracionEmpresasTuristicas.txt");
+                                else if(valor==3)
+                                    archivo = new File("./ComunicacionPublicidad.txt");
+                                else if(valor==4)
+                                    archivo = new File("./Biomedica.txt");
+                                else if(valor==5)
+                                    archivo = new File("./Industrial.txt");
+                                else if(valor==6)
+                                    archivo = new File("./Finanzas.txt");
+                            
                              buffer = new BufferedReader(new FileReader(archivo));
                              String linea;
                              try {
                                 while(buffer.ready()){
                                     linea = buffer.readLine();
+                                    System.out.println(linea);
                                     String[] tokens = linea.split(",");
                                     String cod = tokens[0];
                                     String name = tokens[1];
@@ -92,12 +95,16 @@ public class Proyecto4_estru {
                             buffer.close();
                        }catch(Exception h){
                        }
+                       for(int i=0;i<clases.size();i++){
+                           System.out.println(clases.get(i));
+                       }
                        execute(g);
                    }
                  }            
                        
                  menu();
                  entrada=s.nextLine();
+                
         }while(!"2".equals(entrada));
         
        
