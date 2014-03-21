@@ -132,11 +132,16 @@ public class Proyecto4_estru {
                                }
                            }
                        }
-                               
+                               String espacio="";
                            for(int i=0;i<clases.size();i++){
                            for(int i2=0;i2<clases.get(i).getRequisito().size();i2++){
-                           g.addEdge(cont+"", clases.get(i).getRequisito().get(i2).getName() ,clases.get(i).getName() );
+                               for(int i3=0;i3<cont;i3++){
+                                   espacio+=" ";
+                               }//fin del for
+                               
+                           g.addEdge(espacio, clases.get(i).getRequisito().get(i2).getName() ,clases.get(i).getName() );
                            cont++;
+                           espacio="";
                            }
                        }
                        
