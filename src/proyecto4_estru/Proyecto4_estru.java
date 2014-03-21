@@ -54,6 +54,13 @@ public class Proyecto4_estru {
                         System.out.println("");
                     }//fin del if
                     else{
+                        int numeroClases = 0;
+                        try{
+                        System.out.println("Ingrese la cantidad de clases que desea llevar cada periodo, mayor de 1 y menor de 8");
+                        numeroClases = s.nextInt();
+                        if(numeroClases<1 || numeroClases>7){
+                            System.out.println("Numero erroneo");   
+                        }else{
                         File archivo = null;
                         File archivo2 =null;
                         BufferedReader buffer = null;
@@ -116,7 +123,7 @@ public class Proyecto4_estru {
                             buffer.close();
                        }catch(Exception h){
                        }
-                        System.out.println("antes");
+                       
                        int cont=0;
                        
                        for(int i=0;i<clasesPasadas.size();i++){
@@ -146,13 +153,21 @@ public class Proyecto4_estru {
                        }
                        
                       execute(g);
-                      System.out.println("Ya paso execute");
+                      
+                        }
+                        }catch(Exception w){
+                            System.out.println("Solo Ingrese numeros");
+                        }
+                       
                    }
                     
                  }            
                        
                  menu();
+                
+                 s = new Scanner(System.in);
                  entrada=s.nextLine();
+                 
                 
         }while(!"2".equals(entrada));
         System.exit(0);
@@ -164,6 +179,7 @@ public class Proyecto4_estru {
      public static void execute(Graph g){
         ArrayList<nodo> topo = toposort(g);
         Layout l = new FRLayout(g);
+        
         BasicVisualizationServer<String, String> vv = new BasicVisualizationServer<String, String>(l);
         vv.getRenderContext().setVertexLabelTransformer(new ToStringLabeller());
         vv.getRenderContext().setEdgeLabelTransformer(new ToStringLabeller());
