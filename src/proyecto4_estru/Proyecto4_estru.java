@@ -74,7 +74,6 @@ public class Proyecto4_estru {
                              try {
                                 while(buffer.ready()){
                                     linea = buffer.readLine();
-                                    System.out.println(linea);
                                     String[] tokens = linea.split(",");
                                     String cod = tokens[0];
                                     String name = tokens[1];
@@ -95,11 +94,22 @@ public class Proyecto4_estru {
                             buffer.close();
                        }catch(Exception h){
                        }
+                       int cont=0;
                        for(int i=0;i<clases.size();i++){
-                           System.out.println(clases.get(i));
+                           for(int i2=0;i2<clases.get(i).getRequisito().size();i2++){
+                          g.addEdge(cont+"", clases.get(i).getRequisito().get(i2).getName() ,clases.get(i).getName() );
+                         
+                          cont++;
+                           }
                        }
+                       
+                      
+                       
+                       
                        execute(g);
+                        System.out.println("Ya paso execute");
                    }
+                    
                  }            
                        
                  menu();
