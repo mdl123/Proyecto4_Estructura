@@ -116,21 +116,32 @@ public class Proyecto4_estru {
                             buffer.close();
                        }catch(Exception h){
                        }
-                       
+                        System.out.println("antes");
                        int cont=0;
-                       for(int i=0;i<clases.size();i++){
+                       
+                       for(int i=0;i<clasesPasadas.size();i++){
+                           for(int j=0;j<clases.size();j++){
+                               if(clases.get(j).getCod().equals(clasesPasadas.get(i).getCod())){
+                                  clases.remove(j);
+                               }else{
+                                   for(int k=0;k<clases.get(j).getRequisito().size();k++){
+                                     if(clases.get(j).getRequisito().get(k).getCod().equals(clasesPasadas.get(i).getCod())) {
+                                        clases.get(j).getRequisito().remove(k);
+                                     } 
+                                   }
+                               }
+                           }
+                       }
+                               
+                           for(int i=0;i<clases.size();i++){
                            for(int i2=0;i2<clases.get(i).getRequisito().size();i2++){
-                          g.addEdge(cont+"", clases.get(i).getRequisito().get(i2).getName() ,clases.get(i).getName() );
-                         
-                          cont++;
+                           g.addEdge(cont+"", clases.get(i).getRequisito().get(i2).getName() ,clases.get(i).getName() );
+                           cont++;
                            }
                        }
                        
-                      
-                       
-                       
-                       execute(g);
-                        System.out.println("Ya paso execute");
+                      execute(g);
+                      System.out.println("Ya paso execute");
                    }
                     
                  }            
