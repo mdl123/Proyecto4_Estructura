@@ -41,6 +41,7 @@ public class Proyecto4_estru {
         menu();
         String entrada=s.nextLine();
         ArrayList<Clase> clases = new ArrayList();
+        ArrayList<Clase> clasesPasadas = new ArrayList();
         do{
                 if("1".equals(entrada)){
                     System.out.println("Ingrese el numero de la carrera");
@@ -54,21 +55,28 @@ public class Proyecto4_estru {
                     }//fin del if
                     else{
                         File archivo = null;
+                        File archivo2 =null;
                         BufferedReader buffer = null;
                         try {
-                                if(valor==1)
+                                if(valor==1){
                                     archivo = new File("./SistemasComputacionales.txt");
-                                else if(valor==2) 
+                                    archivo2 = new File("./PasadasSistemas.txt");
+                                }else if(valor==2){
                                     archivo = new File("./AdministracionEmpresasTuristicas.txt");
-                                else if(valor==3)
+                                    archivo2 = new File("./PasadasAdministracionEmpresasTuristicas.txt");
+                                }else if(valor==3){
                                     archivo = new File("./ComunicacionPublicidad.txt");
-                                else if(valor==4)
+                                    archivo2 = new File("./PasadasComunicacionPublicidad.txt");
+                                }else if(valor==4){
                                     archivo = new File("./Biomedica.txt");
-                                else if(valor==5)
+                                    archivo2 = new File("./PasadasBiomedica.txt");
+                                }else if(valor==5){
                                     archivo = new File("./Industrial.txt");
-                                else if(valor==6)
+                                    archivo2 = new File("./PasadasIndustrial.txt");
+                                }else if(valor==6){
                                     archivo = new File("./Finanzas.txt");
-                            
+                                    archivo2 = new File("./PasadasFinanzas.txt");
+                                }
                              buffer = new BufferedReader(new FileReader(archivo));
                              String linea;
                              try {
@@ -88,12 +96,27 @@ public class Proyecto4_estru {
                                 }
                             } catch (Exception e) {
                             }
+                             try {
+                                 buffer = new BufferedReader(new FileReader(archivo2));
+                                while(buffer.ready()){
+                                    linea = buffer.readLine();
+                                    String[] tokens = linea.split(",");
+                                    String cod = tokens[0];
+                                    String name = tokens[1];
+                                    ArrayList<Clase> requisito = new ArrayList();
+                                    
+                                    clasesPasadas.add(new Clase(cod,name,requisito));
+                    
+                                }
+                            } catch (Exception e) {
+                            }
                        } catch (Exception k) {
                        }
                        try{
                             buffer.close();
                        }catch(Exception h){
                        }
+                       
                        int cont=0;
                        for(int i=0;i<clases.size();i++){
                            for(int i2=0;i2<clases.get(i).getRequisito().size();i2++){

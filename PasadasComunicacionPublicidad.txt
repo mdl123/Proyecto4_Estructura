@@ -3,12 +3,12 @@ ADM102,Administración I
 ESP101,Español
 LCC101,Ofimática I
 ART105,Dibujo
-ESP102,Expresión Oral,ESP101
-LCC102,Ofimática II,LCC101
-COM204,Comunicación Gráfica I,ART105
-ART107,Apreciación Literaria,ESP102
-LCC103,Ofimática III,LCC102
+ESP102,Expresión Oral
+LCC102,Ofimática II
+COM204,Comunicación Gráfica I
+ART107,Apreciación Literaria
+LCC103,Ofimática III
 CON204,Análisis Contable I
-ART106,Fotografía,COM204
+ART106,Fotografía
 COM212,Redacción,ESP102
 COM102,Comunicación y Sociedad

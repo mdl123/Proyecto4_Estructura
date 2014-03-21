@@ -2,7 +2,7 @@ MAT101,Introducción al Álgebra
 ADM102,Administración I
 ESP101,Español
 LCC101,Ofimática I
-MAT102,Álgebra,MAT101
+MAT102,Álgebra
 HIS101,Historia de Honduras
 SOC101,Sociología
 FIL101,Filosofía

@@ -2,9 +2,9 @@ MAT101,Introducción al Álgebra
 ADM102,Administración I
 ESP101,Español
 LCC101,Ofimática I
-MAT102,Álgebra,MAT101
-ADM103,Administración II,ADM102
+MAT102,Álgebra
+ADM103,Administración II
 HIS101,Historia de Honduras
-LCC102,Ofimática II,LCC101
+LCC102,Ofimática II
 TLLFIN1,Taller de Competencias I
 TLL308,Ética Profesional
