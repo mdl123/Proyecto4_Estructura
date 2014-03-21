@@ -1,0 +1,41 @@
+MAT102,Álgebra,MAT102
+SOC101,Sociología
+LCC101,Ofimática I
+MAT103,Geometría y Trigonometría,MAT102
+HIS101,Historia de Honduras
+BMD100,Introducción a la Ing. Biomédica
+LCC102,Ofimática II,LCC101
+MAT104,Cálculo I Diferencial con Geometría Analítica,MAT102
+QUI101,Química General,MAT102
+LCC103,Ofimática III,LCC102
+MAT201,Cálculo I Integral con Geometría Analítica,MAT104
+MAT105,Álgebra Lineal,MAT103
+EIE1,Electiva de Idioma Extranjero I
+MAT202,Cálculo II con Geometría Analítica,MAT201
+MEC301,Dibujo Técnico,MAT105
+CCC207,Programación para Ingeniería,MAT105
+EIE2,Electiva de Idioma Extranjero II,EIE1
+MAT203,Ecuaciones Diferenciales,MAT202,MAT105
+FIS201,Física I,MEC301
+MAT301,Estadística Matemática I,MAT201
+EIE3,Electiva de Idioma Extranjero III,EIE2
+MAT209,Variable Compleja,MAT203
+FIS202,Física II,FIS201
+BMD201,Gestión Hospitalaria,MAT301
+INV201,Metodología de la Investigación
+FIS203,Física III,FIS202
+BMD202,Mantenimiento Hospitalario,BMD201
+TLLBMD1,Taller de Competencias I
+FIS204,Física IV,FIS203
+BMD301,Termodinámica,FIS203
+ART/DEP,Elctiva de Arte o Deporte
+TLLBMD2,Taller de Competencias II
+SEL301,Circuitos Eléctricos I,FIS204,MAT209
+BMD302,Electromecánica,BMD301
+BMD303,Anatomía y Fisiología I,BMD301
+SEL306,Circuitos Eléctricos II,SEL301
+BMD304,Instalaciones Hospitalarias I,BMD301
+BMD305,Anatomía y Fisiología II,BMD303
+SEL307,Electrónica I,SEL306 
+MEC400,Actuadores Eléctricos,SEL306
+SEL308,Ingeniería de Control,SEL306

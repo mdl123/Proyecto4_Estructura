@@ -1,0 +1,11 @@
+MAT101,Introducción al Álgebra
+ADM102,Administración I
+ESP101,Español
+LCC101,Ofimática I
+MAT102,Álgebra,MAT101
+HIS101,Historia de Honduras
+SOC101,Sociología
+FIL101,Filosofía
+EIN1,Electiva de Inglés I
+TLL308,Ética Profesional
+DER111,Derecho Empresarial

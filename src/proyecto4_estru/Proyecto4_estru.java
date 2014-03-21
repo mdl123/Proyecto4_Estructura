@@ -116,7 +116,7 @@ public class Proyecto4_estru {
                  entrada=s.nextLine();
                 
         }while(!"2".equals(entrada));
-        
+        System.exit(0);
        
        
       

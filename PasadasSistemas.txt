@@ -1,0 +1,24 @@
+MAT102,Álgebra
+ESP101,Español
+CCC106,Introdución a la Computación
+LCC101,Ofimática I
+MAT103,Geometría y Trigonometría
+HIS101,Historia de Honduras
+CCC104,Programación I
+LCP104,Lab Progra I
+LCC102,Ofimática II
+MAT104,Cálculo I Diferencial con Geometría Analítica
+ADM102,Administración I
+CCC105,Programación
+LCP105,Lab Progra
+LCC103,Ofimática
+MAT201,Cálculo I Integral con Geometría Analítica
+MAT105,Álgebra Lineal
+CCC208,Programación III
+LCP208,Lab Progra III
+EIE1,Electiva de Idioma Extranjero I
+MAT202,Cálculo II con Geometría Analítica
+FIS201,Física I
+CCC301,Estructura de Datos
+EIE2,Electiva de Idioma Extranjero
+FIL101,Filosofía
