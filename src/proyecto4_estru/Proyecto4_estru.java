@@ -40,6 +40,7 @@ public class Proyecto4_estru {
         String entrada=s.nextLine();
         ArrayList<Clase> clases = new ArrayList();//Almacenara inicialmente las clases del plan
         ArrayList<Clase> clasesPasadas = new ArrayList();//Almacenar las clases pasadas
+        ArrayList<Clase> semestrales = new ArrayList();//Almacenar las clases semestrales
         do{
                 if("1".equals(entrada)){
                     System.out.println("Ingrese el numero de la carrera");
@@ -63,26 +64,33 @@ public class Proyecto4_estru {
                         //Se leen los archivos de texto
                         File archivo = null;//archivo con todas las clases del plan
                         File archivo2 =null;//archivo con las clases pasadas del mismo plan
+                        File archivo3 = null;//archivo que lee las clases semestrales
                         BufferedReader buffer = null;
                         try {
                                 if(valor==1){
                                     archivo = new File("./SistemasComputacionales.txt");
                                     archivo2 = new File("./PasadasSistemas.txt");
+                                    archivo3 = new File("./semestralesSistemas.txt");
                                 }else if(valor==2){
                                     archivo = new File("./AdministracionEmpresasTuristicas.txt");
                                     archivo2 = new File("./PasadasAdministracionEmpresasTuristicas.txt");
+                                    archivo3 = new File("./semestralesAdministracion.txt");
                                 }else if(valor==3){
                                     archivo = new File("./ComunicacionPublicidad.txt");
                                     archivo2 = new File("./PasadasComunicacionPublicidad.txt");
+                                    archivo3 = new File("./semestralesComunicacion.txt");
                                 }else if(valor==4){
                                     archivo = new File("./Biomedica.txt");
                                     archivo2 = new File("./PasadasBiomedica.txt");
+                                    archivo3 = new File("./semestralesBiomedica.txt");
                                 }else if(valor==5){
                                     archivo = new File("./Industrial.txt");
                                     archivo2 = new File("./PasadasIndustrial.txt");
+                                    archivo3 = new File("./semestralesIndustrial.txt");
                                 }else if(valor==6){
                                     archivo = new File("./Finanzas.txt");
                                     archivo2 = new File("./PasadasFinanzas.txt");
+                                    archivo3 = new File("./semestralesFinanzas.txt");
                                 }
                                 //leer las clases del plan
                              buffer = new BufferedReader(new FileReader(archivo));
@@ -112,7 +120,7 @@ public class Proyecto4_estru {
                     
                                 }
                             } catch (Exception e) {
-                                 System.out.println("No se pudo abrir el archivo");
+                                 
                             }
                              try {
                                  //leer las clases pasadas
@@ -129,6 +137,23 @@ public class Proyecto4_estru {
                             } catch (Exception e) {
                                 System.out.println("No se pudo abrir el archivo");
                             }
+                             
+                             try {
+                                 //leer las clases semestrales
+                                 buffer = new BufferedReader(new FileReader(archivo3));
+                                while(buffer.ready()){
+                                    linea = buffer.readLine();
+                                    String[] tokens = linea.split(",");
+                                    String cod = tokens[0];//codigo de la clase
+                                    String num = tokens[1];//trimestre
+                                    ArrayList<Clase> requisito = new ArrayList();//crea una lista vacia de requisitos
+                                    semestrales.add(new Clase(cod,num,requisito));//almacena las clases semestrales
+                    
+                                }
+                            } catch (Exception e) {
+                                System.out.println("No se pudo abrir el archivo");
+                            }
+                                    
                        } catch (Exception k) {
                             System.out.println("Ingreso un valor equivocado");
                        }
@@ -155,7 +180,7 @@ public class Proyecto4_estru {
                            }
                        }
                          //Una vez ingresados los datos, llama al metodo ordentopologico, para mostrar el plan con las clases restantes
-                         OrdenTopologico(clases,numeroClases);   
+                         OrdenTopologico(clases,semestrales,numeroClases);   
                          System.out.println("");
                         }
                         }catch(Exception w){
@@ -178,9 +203,10 @@ public class Proyecto4_estru {
       
   }//fin del main
     
-   public static void OrdenTopologico(ArrayList<Clase> clases, int cantidad){
+   public static void OrdenTopologico(ArrayList<Clase> clases,ArrayList<Clase> semestrales, int cantidad){
        ArrayList<Clase> periodo = new ArrayList();//lista que almacenara las clases que se llevaran cada periodo
        ArrayList<Clase> anteriores = new ArrayList();//lista para almacenar las que ya se van mostrando y sacando de la lista clases
+       int trimestre =1;//determina el trimestre, de cada semestre uno o dos
        while(!clases.isEmpty()){//Mientras la lista clases este llena, se seguiran mostrando
            System.out.println("");
            for(int o=0;o<periodo.size();o++){//almacena las clases que se almacenaron en periodo temporalmente las copia en la lista de
@@ -190,6 +216,17 @@ public class Proyecto4_estru {
            periodo.clear();//limpia la lista periodo, para comenzar con las clases del siguiente
            for(int j=0;j<clases.size();j++){
             if(periodo.size()<cantidad){//indica que segun la cantidad de las clases por perido, se llene la lista periodo
+                boolean issemes = false;//indicara si es semestral la clase
+                boolean comprobar = false;//comprueba si es semestral, que este en el trimestre correcto
+                for(int i=0;i<semestrales.size();i++){
+                    if(clases.get(j).getCod().equals(semestrales.get(i).getCod())){
+                        issemes = true;
+                       if(semestrales.get(i).getName().equals(trimestre+"")){
+                         comprobar = true;  
+                        }
+                    }
+                }
+                if((issemes==false) || (issemes==true && comprobar ==true)){
                 if(clases.get(j).getRequisito().isEmpty()){//si la clase no tiene requisito se puede llevar perfectamente
                     periodo.add(clases.get(j));
                     clases.remove(j);//se remueve la clase de clases, porque ya se almaceno temporalmente en perido es decir ya se tomo en cuenta y se mostrara mas adelante
@@ -212,12 +249,18 @@ public class Proyecto4_estru {
                    }
                    
                }
+            }
            }
           }
            
          //Imprime las clases que se deben llevar en ese perido 
          for(int i=0;i<periodo.size();i++){
              System.out.print(" "+"|"+" "+periodo.get(i).getName()+" "+"|");
+         }
+         if(trimestre ==1){
+             trimestre =2;
+         }else{
+             trimestre=1;
          }
        }
        
