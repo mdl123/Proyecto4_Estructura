@@ -11,7 +11,8 @@ QUI101,Química General
 LCC103,Ofimática III
 MAT201,Cálculo I Integral con Geometría Analítica
 CON204,Análisis Contable I
-ART/DEP,Electiva de Arte o DeporteEIE1,Electiva de Idioma Extranjero I
+ART/DEP,Electiva de Arte o Deporte
+EIE1,Electiva de Idioma Extranjero I
 MAT202,Cálculo II con Geometría Analítica
 MAT105,Álgebra Lineal
 MER207,Mercadotecnia I
