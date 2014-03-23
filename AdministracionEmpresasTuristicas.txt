@@ -1,0 +1,60 @@
+MAT101,Introducción al Álgebra
+ADM102,Administración I
+ESP101,Español
+LCC101,Ofimática I
+MAT102,Álgebra,MAT101
+HIS101,Historia de Honduras
+TUR104,Teoría del Turismo
+LCC102,Ofimática II,LCC101
+TUR103,Geografía Turística Nacional,HIS101
+ECO205,Economía Gerencial,ADM102
+SOC101,Sociología
+ART/DEP,Electiva de Arte o Deporte
+MAT107,Estadística I,MAT102
+ECO206,Economía Del Turismo,ECO205,TUR104
+FIL101,Filosofía
+EIN1,Electiva de Inglés I
+TUR204,Geografía Turística Universal,TUR103
+TLL308,Ética Profesional
+TUR205,Tecnología de Hospedaje I,TUR104
+EIN2,Electiva de Inglés II,EIN1
+TUR206,Administración de Empresas de Recreación,ECO206
+TUR207,Administración de Operadoras de Turismo,ECO206
+BIO,Electiva de CC.NN.
+EIN3,Electiva de Inglés III,EIN2
+MER207,Mercadotecnia I,MAT107
+TUR208,Tecnología de Hospedaje II,TUR205
+TUR209,Sistemas de Información Turística,TUR207
+EIN4,Electiva de Inglés IV,EIN3
+MER204,Investigación de Mercados I,MER207
+CON204,Análisis Contable I
+TUR210,Tecnología de Alimentos y Bebidas I,TUR209
+EIETUR1,Electiva de Idioma Extranjero I
+DER111,Derecho Empresarial
+CON315,Contabilidad de Empresas Turísticas,CON204
+TUR305,Tecnología de Alimentos y Bebidas II,TUR210
+EIETUR2,Electiva de Idioma Extranjero II,EIETUR1
+FIN302,Gerencia Financiera I,CON315
+TUR304,Sistemas de Transportes Turísticos,TUR207
+EFETUR1,Electiva I,TUR305
+EIETUR3,Electiva de Idioma Extranjero III,EIETUR2
+FIN401,Gerencia Financiera II,FIN302
+INF201,Comercio Electrónico,TUR304
+MER406,Mercadotecnia Turística,MER204
+TLL311,Servicio al Cliente
+DER316,Legislación Turística,DER111
+TUR306,Turismo Sostenible,MER406
+EFETUR2,Electiva II,TUR305
+REH302,Gerencia de Recursos Humanos I,DER316
+EFETUR3,Electiva III,TUR305
+EMP401,Generación de Empresas I,FIN401,MER406
+REH303,Gerencia de Recursos Humanos II,REH302
+IND502,Productividad y Calidad,EMP401
+EMP402,Generación de Empresas II,EMP401
+TUR403,Desarrollo de Productos Turísticos,REH303
+ADM402,Estrategia Gerencial,IND502
+TUR401,Planificación y Ordenamiento Territorial,TUR306
+TUR593,Práctica Profesional,TUR403,ADM402,TUR401
+TUR594,Proyecto de Graduación,TUR403,ADM402,TUR401
+
+

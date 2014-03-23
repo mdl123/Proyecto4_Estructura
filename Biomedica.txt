@@ -1,0 +1,62 @@
+MAT102,Álgebra,MAT102
+ESP101,Español
+SOC101,Sociología
+LCC101,Ofimática I
+MAT103,Geometría y Trigonometría,MAT102
+HIS101,Historia de Honduras
+BMD100,Introducción a la Ing. Biomédica
+LCC102,Ofimática II,LCC101
+MAT104,Cálculo I Diferencial con Geometría Analítica,MAT102
+QUI101,Química General,MAT102
+LCC103,Ofimática III,LCC102
+MAT201,Cálculo I Integral con Geometría Analítica,MAT104
+MAT105,Álgebra Lineal,MAT103
+BIO201,Biología
+EIE1,Electiva de Idioma Extranjero I
+MAT202,Cálculo II con Geometría Analítica,MAT201
+MEC301,Dibujo Técnico,MAT105
+CCC207,Programación para Ingeniería,MAT105
+EIE2,Electiva de Idioma Extranjero II,EIE1
+MAT203,Ecuaciones Diferenciales,MAT202,MAT105
+FIS201,Física I,MEC301
+MAT301,Estadística Matemática I,MAT201
+EIE3,Electiva de Idioma Extranjero III,EIE2
+MAT209,Variable Compleja,MAT203
+FIS202,Física II,FIS201
+BMD201,Gestión Hospitalaria,MAT301
+EIE4,Electiva de Idioma Extranjero IV,EIE3
+INV201,Metodología de la Investigación
+FIS203,Física III,FIS202
+BMD202,Mantenimiento Hospitalario,BMD201
+TLLBMD1,Taller de Competencias I
+FIS204,Física IV,FIS203
+BMD301,Termodinámica,FIS203
+ART/DEP,Elctiva de Arte o Deporte
+TLLBMD2,Taller de Competencias II
+SEL301,Circuitos Eléctricos I,FIS204,MAT209
+BMD302,Electromecánica,BMD301
+BMD303,Anatomía y Fisiología I,BMD301
+SEL306,Circuitos Eléctricos II,SEL301
+BMD304,Instalaciones Hospitalarias I,BMD301
+BMD305,Anatomía y Fisiología II,BMD303
+SEL307,Electrónica I,SEL306 
+MEC400,Actuadores Eléctricos,SEL306
+SEL308,Ingeniería de Control,SEL306
+BMD306,Instalaciones Hospitalarias II,BMD304
+SEL309,Electrónica II,SEL307
+BMD401,Esterilización Hospitalaria,SEL308
+EFEBMD1,Electiva de Formación Específica I
+BMD402,Instalaciones Hospitalarias III,BMD306
+SEL407,Electrónica II,SEL307
+BMD403,Equipos de Oxigeno-Terapia,BMD401
+EFEBMD2,Electiva de Formación Específica II
+BMD404,Instalaciones Hospitalarias IV,BMD402
+BMD405,Unidades de Cardiología y Neurología,SEL407
+BMD406,Equipos de Soporte de Vida,SEL407
+BMD407,Equipos de Laboratorio,BMD403
+EMP401,Generación de Empresas I,BMD404
+BMD408,Imagenología,BMD405
+BMD409,Equipos de Sala de Operaciones,BMD406
+BMD501,Proyecto I
+EFEBMD3,Electiva de Formación Específica III
+BMD502,Proyecto II,BMD501

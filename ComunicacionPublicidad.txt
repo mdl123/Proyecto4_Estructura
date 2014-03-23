@@ -1,0 +1,58 @@
+MAT101,Introducción al Álgebra
+ADM102,Administración I
+ESP101,Español
+LCC101,Ofimática I
+MAT102,Álgebra,MAT101
+ART105,Dibujo
+ESP102,Expresión Oral,ESP101
+LCC102,Ofimática II,LCC101
+MAT107,Estadística I,MAT102
+COM204,Comunicación Gráfica I,ART105
+ART107,Apreciación Literaria,ESP102
+LCC103,Ofimática III,LCC102
+CON204,Análisis Contable I
+ART106,Fotografía,COM204
+COM212,Redacción,ESP102
+COM102,Comunicación y Sociedad
+MER207,Mercadotecnia I,MAT102
+COM303,Comunicación Gráfica II,ART106
+HIS101,Historia de Honduras
+COM101,Fundamentos de la Teoría de la Comunicación,COM102
+MER202,Comportamiento de Consumidor,MER207
+ART109,Música para Medios
+SOC101,Sociología
+COM201,Introducción a los Medios Audiovisuales,COM101
+MER203,Publicidad,MER202,COM204
+MER204,Investigación de Mercados I,MER207
+FIL101,Filosofía
+COM210,Laboratorio de Edición de Audio,COM201
+CON203,Introducción al Análisis Financiero,CON204
+COM405,Administración de la Publicidad,MER203
+ART111,Fotografía Comercial,ART106
+COM211,Laboratorio de Edición de Video,COM210
+COM310,Creatividad Publicitaria,MER203
+COM421,Planificación de Medios,COM405
+COM209,Fundamentos Técnicos de los Medios Audiovisuales,COM211
+EIE1,Electiva de Idioma Extranjero I
+COM406,Imagen Corporativa,MER203
+COM402,Edición de Impresos,COM310
+COM312,Guión de Medios Audiovisuales,ART106,COM209
+EIE2,Electiva de Idioma Extranjero II,EIE1
+COM311,Campañas de Divulgación,COM310
+COM306,Producción de Audio,COM312
+COM309,Laboratorio de Animación,COM209
+EIE3,Electiva de Idioma Extranjero III,EIE2
+DER11,Derecho Empresarial
+BIO,Electiva de CC.NN
+EIE4,Electiva de Idioma Extranjero IV,EIE3
+COM307,Producción de Televisión,COM306
+EFECOM1,Electiva de Formación Especifica I,COM402
+TLLCOM1,Taller de Competencias
+EMP401,Generación de Empresas I,DER111
+EFECOM2,Electiva de Formación Especifia II,COM402
+EFECOM3,Electiva de Formación Especifia III,COM402
+COM308,Producción de la Publicidad,COM311,COM307
+COM404,Multimedia,COM307
+TLL308,Ética Profesional
+COM593,Práctica Profesional,COM308,TLL308
+COM594,Proyecto de Graduación,COM308,TLL308

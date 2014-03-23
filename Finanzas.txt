@@ -1,0 +1,56 @@
+MAT101,Introducción al Álgebra
+ADM102,Administración I
+ESP101,Español
+LCC101,Ofimática I
+MAT102,Álgebra,MAT101
+ADM103,Administración II,ADM102
+HIS101,Historia de Honduras
+LCC102,Ofimática II,LCC101
+MAT106,Cálculo para las Ciencias Sociales,MAT102
+ADM301,Comportamiento Humano en las Organizaciones,ADM103
+SOC101,Sociología
+LCC103,Ofimática III,LCC102
+MAT107,Estadística I,MAT102
+ECO102,Microeconomía
+FIL101,Filosofía
+ART/DEP,Electiva de Arte o Deporte
+FIN208,Matemática Financiera,MAT106,MAT107
+MER207,Mercadotecnia I,MAT102
+ECO201,Macroeconomía,ECO102
+BIO,Electiva de CC.NN.
+MAT205,Estadística II,FIN208
+CON204,Análisis Contable I
+ECO204,Economía Internacional,ECO201
+EIE1,Electiva de Idioma Extranjero I
+CCC306,Programación,MAT205
+CON308,Análisis Contable II,CON204
+ECO301,Introducción a la Teoría Monetaria,ECO204
+EIE2,Electiva de Idioma Extranjero II,EIE1
+INF201,Comercio Electrónico,CCC306
+FIN302,Gerencia Financiera I,CON308
+DER111,Dereho Empresiarial
+EIE3,Electiva de Idioma Extranjero III,EIE2
+MER407,Mercadotecnia Bancaria,MER207
+CON302,Contabilidad para Toma de Decisiones,FIN302
+DER203,Legislación de las Instituciones Financieras,DER111
+EIE4,Electiva de Idioma Extranjero IV,EIE3
+CON312,Contabilidad Bancaria,CON302
+FIN305,Mercados e Intermediarios Financieros,CON302
+FIN414,Administración del Crédito,CON302,INF201
+FIN401,Gerencia Financiera II,FIN305
+EMP401,Generación de Empresas I,FIN305
+FIN413,Administración de Inversiones,CON312
+FIN402,Finanzas Internacionales,FIN401
+EMP402,Generación de Empresas II,EMP401
+ECO401,Seminario de Política Económica,FIN401
+FIN408,Gerencia Financiera III,FIN402,FIN401
+IND502,Productividad y Calidad,EMP401
+TLLFIN1,Taller de Competencias I
+TLL308,Ética Profesional
+ADM402,Estrategia Gerencial,EMP402
+EFEFIN1,Electiva de Formación Específica I,FIN413
+ADM401,Control de la Gestión Total,FIN408
+EFEIN2,Electiva de Formación Específica II,EFEFIN1
+TLLFIN2,Taller de Competencias II
+FIN593,Practica Profesional,ADM401,TLLFIN2
+FIN594,Proyecto de Graduación,ADM401,TLLFIN2

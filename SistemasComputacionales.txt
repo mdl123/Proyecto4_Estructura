@@ -1,0 +1,61 @@
+MAT102,Álgebra,MAT102
+ESP101,Español
+CCC106,Introdución a la Computación
+LCC101,Ofimática I
+MAT103,Geometría y Trigonometría,MAT102
+HIS101,Historia de Honduras
+CCC104,Programación I,CCC106,MAT102
+LCP104,Lab Progra I,CCC106,MAT102
+LCC102,Ofimática II,LCC101
+MAT104,Cálculo I Diferencial con Geometría Analítica,MAT102
+ADM102,Administración I
+CCC105,Programación II,CCC104,LCP104
+LCP105,Lab Progra II,CCC104,LCP104
+LCC103,Ofimática III,LCC102
+MAT201,Cálculo I Integral con Geometría Analítica,MAT104
+MAT105,Álgebra Lineal,MAT103
+CCC208,Programación III,CCC105,LCP105
+LCP208,Lab Progra III,CCC105,LCP105
+EIE1,Electiva de Idioma Extranjero I
+MAT202,Cálculo II con Geometría Analítica,MAT201
+FIS201,Física I,MAT201
+CCC301,Estructura de Datos,CCC208,LCP208,LCC103
+EIE2,Electiva de Idioma Extranjero II,EIE1
+MAT203,Ecuaciones Diferenciales,MAT202
+FIS202,Física II,FIS201
+CCC302,Organización de Archivos,CCC301
+EIE3,Electiva de Idioma Extranjero III,EIE2
+MAT303,MAtemáticas Discretas,MAT203
+FIS203,Física III,FIS202
+CCC205,Programación IV,CCC302
+EIE4,Electiva de Idioma Extranjero IV,EIE3
+MAT304,Métodos Numericos,MAT303
+MAT301,Estadística Matemática I,MAT201
+INF301,Sistemas de Información
+SOC101,Sociología
+CCC407,Análisis de Algoritmos,MAT304
+CCC305,Diseño Lógico,FIS203,CCC301
+CCC303,Teoria de Base de Datos I,INF301,CCC205
+FIL101,Filosofía
+CCC403,Organización Computadoras,CCC305
+CCC304,Teoria de Base de Datos II,CCC303
+ART/DEP,Electiva de Arte o Deporte
+CON204,Análisis Contable I
+CCC405,Lenguajes de Programación,MAT304,CCC205
+BIO,Electia de CC.NN
+CON308,Análisis Contable II,CON204
+CCC408,Teoria de la Computación,CCC405
+EMP401,Generación de Empresas I,CCC403
+INF405,Análisis y Diseño de Sistemas I,CCC303,CON308
+CCC401,Sistemas Operativos I,CCC403
+CCC404,Redes,CCC401
+INF406,Análisis y Diseño de Sistemas II,INF405
+CCC402,Sistemas Operativos II,CCC401
+EFECCC1,Electiva de Formación Específica I,INF406
+CCC406,Ingenieria de Software,INF406
+CCC501,Compiladores I,CCC408
+CCC593,Proyecto de Graduación Fase I
+EFECCC2, Electiva de Formación Específica II,INF406
+CCC502,Compiladores II,CCC501
+CCC594,Proyecto de Graduación Fase II,CCC593
+

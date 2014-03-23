@@ -1,0 +1,21 @@
+MAT102,Álgebra
+ESP101,Español
+ADM102,Administración I
+LCC101,Ofimática I
+MAT103,Geometría y Trigonometría
+HIS101,Historia de Honduras
+IND101,Introducción a la Ing. Industrial
+LCC102,Ofimática II
+MAT104,Cálculo I Diferencial con Geometría Analítica
+QUI101,Química General
+LCC103,Ofimática III
+MAT201,Cálculo I Integral con Geometría Analítica
+CON204,Análisis Contable I
+ART/DEP,Electiva de Arte o DeporteEIE1,Electiva de Idioma Extranjero I
+MAT202,Cálculo II con Geometría Analítica
+MAT105,Álgebra Lineal
+MER207,Mercadotecnia I
+EIE2,Electiva de Idioma Extranjero II
+MAT203,Ecuaciones Diferenciales,MAT202
+CON308,Análisis Contable II
+FIS201,Física I

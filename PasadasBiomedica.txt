@@ -1,0 +1,41 @@
+MAT102,Álgebra
+SOC101,Sociología
+LCC101,Ofimática I
+MAT103,Geometría y Trigonometría
+HIS101,Historia de Honduras
+BMD100,Introducción a la Ing. Biomédica
+LCC102,Ofimática II
+MAT104,Cálculo I Diferencial con Geometría Analítica
+QUI101,Química General
+LCC103,Ofimática III
+MAT201,Cálculo I Integral con Geometría Analítica
+MAT105,Álgebra Lineal
+EIE1,Electiva de Idioma Extranjero I
+MAT202,Cálculo II con Geometría Analítica
+MEC301,Dibujo Técnico
+CCC207,Programación para Ingeniería
+EIE2,Electiva de Idioma Extranjero II
+MAT203,Ecuaciones Diferenciales
+FIS201,Física I
+MAT301,Estadística Matemática I
+EIE3,Electiva de Idioma Extranjero III
+MAT209,Variable Compleja
+FIS202,Física II
+BMD201,Gestión Hospitalaria
+INV201,Metodología de la Investigación
+FIS203,Física III
+BMD202,Mantenimiento Hospitalario
+TLLBMD1,Taller de Competencias I
+FIS204,Física IV
+BMD301,Termodinámica
+ART/DEP,Elctiva de Arte o Deporte
+TLLBMD2,Taller de Competencias II
+SEL301,Circuitos Eléctricos I
+BMD302,Electromecánica
+BMD303,Anatomía y Fisiología I
+SEL306,Circuitos Eléctricos II
+BMD304,Instalaciones Hospitalarias I
+BMD305,Anatomía y Fisiología II
+SEL307,Electrónica I
+MEC400,Actuadores Eléctricos
+SEL308,Ingeniería de Control
