@@ -54,7 +54,7 @@ EMP402,Generación de Empresas II,EMP401
 TUR403,Desarrollo de Productos Turísticos,REH303
 ADM402,Estrategia Gerencial,IND502
 TUR401,Planificación y Ordenamiento Territorial,TUR306
-TUR593,Práctica Profesional,TUR403,ADM402,TUR401
-TUR594,Proyecto de Graduación,TUR403,ADM402,TUR401
+TUR593,Práctica Profesional,todas
+TUR594,Proyecto de Graduación,todas
 
 

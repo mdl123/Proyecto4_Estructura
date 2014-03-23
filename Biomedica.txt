@@ -57,6 +57,6 @@ BMD407,Equipos de Laboratorio,BMD403
 EMP401,Generación de Empresas I,BMD404
 BMD408,Imagenología,BMD405
 BMD409,Equipos de Sala de Operaciones,BMD406
-BMD501,Proyecto I
+BMD501,Proyecto I,todas
 EFEBMD3,Electiva de Formación Específica III
 BMD502,Proyecto II,BMD501

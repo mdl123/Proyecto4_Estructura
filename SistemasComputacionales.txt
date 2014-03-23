@@ -54,7 +54,7 @@ CCC402,Sistemas Operativos II,CCC401
 EFECCC1,Electiva de Formación Específica I,INF406
 CCC406,Ingenieria de Software,INF406
 CCC501,Compiladores I,CCC408
-CCC593,Proyecto de Graduación Fase I
+CCC593,Proyecto de Graduación Fase I,todas
 EFECCC2, Electiva de Formación Específica II,INF406
 CCC502,Compiladores II,CCC501
 CCC594,Proyecto de Graduación Fase II,CCC593

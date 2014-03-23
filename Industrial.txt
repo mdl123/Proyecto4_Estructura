@@ -59,5 +59,5 @@ EFEIND2,Electiva de Formación Específica II
 EFEIND3,Electiva de Formación Específica III
 EMP402,Generación de Empresas II,EMP401
 IND413,Modelación de Procesos Industriales,IND419
-IND593,Práactica Profesional,EFEIND3,IND413
-IND594,Proyecto de Graduación,EFEIND3,IND413
+IND593,Práctica Profesional,todas
+IND594,Proyecto de Graduación,todas

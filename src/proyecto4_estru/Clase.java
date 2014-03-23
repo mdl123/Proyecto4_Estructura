@@ -19,6 +19,11 @@ public class Clase {//Representa una clase
 
     public Clase() {//Constructor vacio
     }
+    public Clase(String cod, String name) {//Constructor sobrecargado
+        this.cod = cod;
+        this.name = name;
+       
+    }
     public Clase(String cod, String name, ArrayList<Clase> requisito) {//Constructor sobrecargado
         this.cod = cod;
         this.name = name;

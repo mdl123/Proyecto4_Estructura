@@ -54,5 +54,5 @@ EFECOM3,Electiva de Formación Especifia III,COM402
 COM308,Producción de la Publicidad,COM311,COM307
 COM404,Multimedia,COM307
 TLL308,Ética Profesional
-COM593,Práctica Profesional,COM308,TLL308
-COM594,Proyecto de Graduación,COM308,TLL308
+COM593,Práctica Profesional,todas
+COM594,Proyecto de Graduación,todas

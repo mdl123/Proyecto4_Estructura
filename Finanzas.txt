@@ -52,5 +52,5 @@ EFEFIN1,Electiva de Formación Específica I,FIN413
 ADM401,Control de la Gestión Total,FIN408
 EFEIN2,Electiva de Formación Específica II,EFEFIN1
 TLLFIN2,Taller de Competencias II
-FIN593,Practica Profesional,ADM401,TLLFIN2
-FIN594,Proyecto de Graduación,ADM401,TLLFIN2
+FIN593,Practica Profesional,todas
+FIN594,Proyecto de Graduación,todas
