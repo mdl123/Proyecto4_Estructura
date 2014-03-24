@@ -11,6 +11,7 @@ import edu.uci.ics.jung.graph.util.Pair;
 import edu.uci.ics.jung.visualization.BasicVisualizationServer;
 import edu.uci.ics.jung.visualization.decorators.ToStringLabeller;
 import edu.uci.ics.jung.visualization.renderers.Renderer;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.io.BufferedReader;
@@ -265,14 +266,17 @@ public class Proyecto4_estru {
          //Almacena en la lista de  labels(clases) por cada periodo
           JLabel labe = new JLabel(periodos+"");//crear el label
           labe.setBounds(5,coordenaday,10,20);
-          labe.setFont(new Font("Courier", Font.BOLD,14));
+          labe.setFont(new Font("Courier", Font.ROMAN_BASELINE,14));
+        labe.setForeground(Color.blue);
           labe.setBorder(LineBorder.createGrayLineBorder()); 
+          labe.setBackground(Color.BLACK);
           labels.add(labe);
          for(int i=0;i<periodo.size();i++){
              JLabel label = new JLabel(periodo.get(i).getName());//crear el label
              label.setBounds(coordenadax + (i*185),coordenaday,180,25);
-             label.setFont(new Font("Courier", Font.BOLD,10));
+             label.setFont(new Font("Courier", Font.HANGING_BASELINE,10));
              label.setBorder(LineBorder.createGrayLineBorder());
+             label.setForeground(Color.red);
              labels.add(label);//almacenando por cada periodo
          }
           
@@ -292,7 +296,9 @@ public class Proyecto4_estru {
        for(int j=0;j<labels.size();j++){
            jf.add(labels.get(j));//agrefa al jframe todas las labels(clases) de la lista labels
        }
+       jf.getContentPane().setBackground(Color.white);
       jf.setExtendedState(jf.MAXIMIZED_BOTH);
+      
     jf.setVisible(true);
    jf.setResizable(false);
        jf.setTitle("Ruta");
