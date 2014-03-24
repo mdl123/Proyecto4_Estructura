@@ -1,0 +1,103 @@
+//le cambie el nombre al Orden Topologico ya que en si no es Orden Topologico
+   
+
+public static void MostrarRuta(ArrayList<Clase> clases, int cantidad){
+  
+       JFrame jf;
+           jf=new JFrame();
+           jf.setSize(1200, 800);
+   ArrayList<JLabel>jl;//arrayList de Jlabels que se meteran en el Jframe
+           jl=new ArrayList();
+           int posx=325;//la poscion de los JLabel en x
+           int posy=325;//la poscion de los JLabel en y
+           ArrayList<Integer>pos;//pos almacena el tamaño del arraylist posicion en cada iteracion del while grande, los uso para aplicar el mod ==0 para hasta donde es cada trimestre
+           pos=new ArrayList();
+       ArrayList<Clase> periodo = new ArrayList();//lista que almacenara las clases que se llevaran cada periodo
+       ArrayList<Clase> anteriores = new ArrayList();//lista para almacenar las que ya se van mostrando y sacando de la lista clases
+       while(!clases.isEmpty()){//Mientras la lista clases este llena, se seguiran mostrando
+           System.out.println("");
+           for(int o=0;o<periodo.size();o++){//almacena las clases que se almacenaron en periodo temporalmente las copia en la lista de
+               //clases ya mostradas
+               anteriores.add(periodo.get(o));
+           }
+           periodo.clear();//limpia la lista periodo, para comenzar con las clases del siguiente
+           for(int j=0;j<clases.size();j++){
+            if(periodo.size()<cantidad){//indica que segun la cantidad de las clases por perido, se llene la lista periodo
+                if(clases.get(j).getRequisito().isEmpty()){//si la clase no tiene requisito se puede llevar perfectamente
+                    periodo.add(clases.get(j));
+                    clases.remove(j);//se remueve la clase de clases, porque ya se almaceno temporalmente en perido es decir ya se tomo en cuenta y se mostrara mas adelante
+                }else{
+                    //si es que tiene lista de clases requisito, compara con las clases en la lista anteriores(antes tomadas en cuenta)
+                    //tienen que estar todas sus clases requisto antes mistradas para poder ser tomada en cuenta
+                    int con=0;
+                    for(int h=0;h<clases.get(j).getRequisito().size();h++){
+                       for(int k=0;k<anteriores.size();k++){
+                          if(clases.get(j).getRequisito().get(h).getCod().equals(anteriores.get(k).getCod())){
+                            con++;
+                       
+                           }
+                       }
+                    }
+                    //Si todas las clases requisito ya estan en anteriores, la almacena temporalmente en perido y la remueve de clases
+                    if(con==clases.get(j).getRequisito().size()){
+                      periodo.add(clases.get(j));
+                      clases.remove(j);
+                   }
+                   
+               }
+           }
+          }
+           
+         //Imprime las clases que se deben llevar en ese perido 
+           
+          
+         
+       
+         for(int i=0;i<periodo.size();i++){
+             
+             jl.add(new JLabel(periodo.get(i).getName()));
+             //jl.get(i).setLocation(posx, posy);
+           
+         }
+        
+      pos.add(periodo.size());
+       }
+       
+       
+       /*
+       Lo que trato de hacer aqui es mostrar los jlabels a ciertos intervalos, e ir incrmentando la posicon y donde se va
+       a imprimir todo
+       
+       */
+       
+       
+       System.out.println("");
+       int cont=0;
+      Container cp;
+      cp=new Container();
+        for(int i=0;i<jl.size();i++){
+             
+             jl.get(i).setLocation(posx, posy);
+            cp.add(jl.get(i));
+            posx+=10;
+            if(i%pos.get(cont)==0){
+                posy+=10;
+         posx=325;
+         if(cont<pos.size()-1){
+         cont++;
+         }
+            }
+         }
+           System.out.println("llego");
+         for(int i=0;i<jl.size();i++){
+             
+             jf.add(jl.get(i));
+         }
+        jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        jf.pack();
+    
+     jf.setContentPane(cp);
+        //jf.setLayout(null);
+        jf.setVisible(true);
+   }//fin del metodo
+   
