@@ -292,8 +292,9 @@ public class Proyecto4_estru {
        for(int j=0;j<labels.size();j++){
            jf.add(labels.get(j));//agrefa al jframe todas las labels(clases) de la lista labels
        }
-       jf.pack();
-       jf.setVisible(true);
+      jf.setExtendedState(jf.MAXIMIZED_BOTH);
+    jf.setVisible(true);
+   jf.setResizable(false);
        jf.setTitle("Ruta");
        
    }
