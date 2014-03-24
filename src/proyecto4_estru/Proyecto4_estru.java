@@ -140,10 +140,12 @@ public class Proyecto4_estru {
                                 }
                             } catch (Exception e) {
                                 System.out.println("No se pudo abrir el archivo");
+                                e.printStackTrace();
                             }
                                     
                        } catch (Exception k) {
                             System.out.println("Ingreso un valor equivocado");
+                            k.printStackTrace();
                        }
                        try{
                             buffer.close();
