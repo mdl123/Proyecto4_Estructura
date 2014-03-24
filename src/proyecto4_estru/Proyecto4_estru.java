@@ -210,8 +210,9 @@ public class Proyecto4_estru {
        JFrame jf=jf=new JFrame();//frame para mostrar la ruta
        jf.setSize(1200, 800);//tamaño el frame
        jf.setLayout(null);
-       int coordenadax = 10;//coordenada x posicion, de los labels representando las clases
+       int coordenadax = 20;//coordenada x posicion, de los labels representando las clases
        int coordenaday = 10;//coordenada y posicion, de los labels representando las clases
+       int periodos = 1;
        ArrayList<JLabel> labels = new ArrayList();//lista para almacenar las clases en labels
        ArrayList<Clase> periodo = new ArrayList();//lista que almacenara las clases que se llevaran cada periodo
        ArrayList<Clase> anteriores = new ArrayList();//lista para almacenar las que ya se van mostrando y sacando de la lista clases
@@ -262,6 +263,11 @@ public class Proyecto4_estru {
           }
            
          //Almacena en la lista de  labels(clases) por cada periodo
+          JLabel labe = new JLabel(periodos+"");//crear el label
+          labe.setBounds(5,coordenaday,10,20);
+          labe.setFont(new Font("Courier", Font.BOLD,14));
+          labe.setBorder(LineBorder.createGrayLineBorder()); 
+          labels.add(labe);
          for(int i=0;i<periodo.size();i++){
              JLabel label = new JLabel(periodo.get(i).getName());//crear el label
              label.setBounds(coordenadax + (i*185),coordenaday,180,25);
@@ -270,12 +276,18 @@ public class Proyecto4_estru {
              labels.add(label);//almacenando por cada periodo
          }
           
-         if(trimestre ==1){
+         if(trimestre ==1)
              trimestre =2;
-         }else{
+         else
              trimestre=1;
+         if(periodos==4){
+             periodos=1;
+             coordenaday+=50;//solo la coordenada y avanzara 
+         }else{
+             periodos++;
+             coordenaday+=30;//solo la coordenada y avanzara
          }
-         coordenaday+=30;//solo la coordenada y avanzara
+             
        }
        for(int j=0;j<labels.size();j++){
            jf.add(labels.get(j));//agrefa al jframe todas las labels(clases) de la lista labels
