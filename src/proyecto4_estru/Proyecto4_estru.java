@@ -276,7 +276,7 @@ public class Proyecto4_estru {
              label.setBounds(coordenadax + (i*185),coordenaday,180,25);
              label.setFont(new Font("Courier", Font.HANGING_BASELINE,10));
              label.setBorder(LineBorder.createGrayLineBorder());
-             label.setForeground(Color.red);
+             label.setForeground(Color.black);
              labels.add(label);//almacenando por cada periodo
          }
           
