@@ -12,6 +12,7 @@ import edu.uci.ics.jung.visualization.BasicVisualizationServer;
 import edu.uci.ics.jung.visualization.decorators.ToStringLabeller;
 import edu.uci.ics.jung.visualization.renderers.Renderer;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -23,6 +24,8 @@ import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.border.LineBorder;
 
 /**
  *
@@ -179,8 +182,8 @@ public class Proyecto4_estru {
                                }
                            }
                        }
-                         //Una vez ingresados los datos, llama al metodo ordentopologico, para mostrar el plan con las clases restantes
-                         OrdenTopologico(clases,semestrales,numeroClases);   
+                         //Una vez ingresados los datos, llama al metodo ruta, para mostrar el plan con las clases restantes
+                        ruta(clases,semestrales,numeroClases);   
                          System.out.println("");
                         }
                         }catch(Exception w){
@@ -203,19 +206,24 @@ public class Proyecto4_estru {
       
   }//fin del main
     
-   public static void OrdenTopologico(ArrayList<Clase> clases,ArrayList<Clase> semestrales, int cantidad){
+   public static void ruta(ArrayList<Clase> clases,ArrayList<Clase> semestrales, int cantidad){
+       JFrame jf=jf=new JFrame();//frame para mostrar la ruta
+       jf.setSize(1200, 800);//tamaño el frame
+       jf.setLayout(null);
+       int coordenadax = 10;//coordenada x posicion, de los labels representando las clases
+       int coordenaday = 10;//coordenada y posicion, de los labels representando las clases
+       ArrayList<JLabel> labels = new ArrayList();//lista para almacenar las clases en labels
        ArrayList<Clase> periodo = new ArrayList();//lista que almacenara las clases que se llevaran cada periodo
        ArrayList<Clase> anteriores = new ArrayList();//lista para almacenar las que ya se van mostrando y sacando de la lista clases
        int trimestre =1;//determina el trimestre, de cada semestre uno o dos
        while(!clases.isEmpty()){//Mientras la lista clases este llena, se seguiran mostrando
-           System.out.println("");
-           for(int o=0;o<periodo.size();o++){//almacena las clases que se almacenaron en periodo temporalmente las copia en la lista de
+        for(int o=0;o<periodo.size();o++){//almacena las clases que se almacenaron en periodo temporalmente las copia en la lista de
                //clases ya mostradas
                anteriores.add(periodo.get(o));
            }
            periodo.clear();//limpia la lista periodo, para comenzar con las clases del siguiente
            for(int j=0;j<clases.size();j++){
-            if(periodo.size()<cantidad){//indica que segun la cantidad de las clases por perido, se llene la lista periodo
+            if(periodo.size()<cantidad){//indica que segun la cantidad de las clases por periodo, se llene la lista periodo
                 boolean issemes = false;//indicara si es semestral la clase
                 boolean comprobar = false;//comprueba si es semestral, que este en el trimestre correcto
                 for(int i=0;i<semestrales.size();i++){
@@ -229,10 +237,10 @@ public class Proyecto4_estru {
                 if((issemes==false) || (issemes==true && comprobar ==true)){
                 if(clases.get(j).getRequisito().isEmpty()){//si la clase no tiene requisito se puede llevar perfectamente
                     periodo.add(clases.get(j));
-                    clases.remove(j);//se remueve la clase de clases, porque ya se almaceno temporalmente en perido es decir ya se tomo en cuenta y se mostrara mas adelante
+                    clases.remove(j);//se remueve la clase de clases, porque ya se almaceno temporalmente en periodo es decir ya se tomo en cuenta y se mostrara mas adelante
                 }else{
                     //si es que tiene lista de clases requisito, compara con las clases en la lista anteriores(antes tomadas en cuenta)
-                    //tienen que estar todas sus clases requisto antes mistradas para poder ser tomada en cuenta
+                    //tienen que estar todas sus clases requisito antes mostradas para poder ser tomada en cuenta
                     int con=0;
                     for(int h=0;h<clases.get(j).getRequisito().size();h++){
                        for(int k=0;k<anteriores.size();k++){
@@ -242,7 +250,7 @@ public class Proyecto4_estru {
                            }
                        }
                     }
-                    //Si todas las clases requisito ya estan en anteriores, la almacena temporalmente en perido y la remueve de clases
+                    //Si todas las clases requisito ya estan en anteriores, la almacena temporalmente en periodo y la remueve de clases
                     if(con==clases.get(j).getRequisito().size()){
                       periodo.add(clases.get(j));
                       clases.remove(j);
@@ -253,16 +261,28 @@ public class Proyecto4_estru {
            }
           }
            
-         //Imprime las clases que se deben llevar en ese perido 
+         //Almacena en la lista de  labels(clases) por cada periodo
          for(int i=0;i<periodo.size();i++){
-             System.out.print(" "+"|"+" "+periodo.get(i).getName()+" "+"|");
+             JLabel label = new JLabel(periodo.get(i).getName());//crear el label
+             label.setBounds(coordenadax + (i*185),coordenaday,180,25);
+             label.setFont(new Font("Courier", Font.BOLD,10));
+             label.setBorder(LineBorder.createGrayLineBorder());
+             labels.add(label);//almacenando por cada periodo
          }
+          
          if(trimestre ==1){
              trimestre =2;
          }else{
              trimestre=1;
          }
+         coordenaday+=30;//solo la coordenada y avanzara
        }
+       for(int j=0;j<labels.size();j++){
+           jf.add(labels.get(j));//agrefa al jframe todas las labels(clases) de la lista labels
+       }
+       jf.pack();
+       jf.setVisible(true);
+       jf.setTitle("Ruta");
        
    }
     
